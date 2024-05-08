@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block mi_contenedor %}
+<div class="bg-black" style="height: 200px;">
+    <h1 class="pt-4 text-white">Bienvenido Usuario {{ user.username | upper }}</h1>
+    <p class="text-light">Tenemos una lista de productos exclusivos para ti. ¿Quieres conocer más?</p>
+    <a href="" class="btn btn-primary mt-3">Contáctanos</a>
+</div>
+    <div class="pt-5 row row-cols-2 row-cols-md-3 g-4">
+        {% for i in inmuebles %}
+                <div class="col">
+                    <div class="card" >
+                        <a href=""><img src="media/{{ i.image }}" class="card-img-top img-card-1" alt="{{ i.nombre }}" style="height: 400px"></a>
+                        <div class="card-body">
+                            <h5 class="card-title">{{i.nombre}}</h5>
+                            <p class="card-text">{{i.direccion}}, {{i.comuna}}</p>
+                            <p class="card-text">{{i.descripcion}}</p>
+                        </div>
+                    </div>
+                </div>
+        {% endfor %}
+    </div>
+{% endblock %}
