@@ -1,27 +1,55 @@
-# Proyecto-Hito-1-Conectando-Django-a-una-base-de-datos
+# Django Database Integration & Architecture
 
-## Description
-This repository contains the code for a Django Web Application project. The goal is to connect and interact with a database using Django's ORM (Object-Relational Mapping).
+Este repositorio demuestra la implementación de un backend robusto utilizando **Django**, enfocado en la transición de un sistema de datos estáticos a una arquitectura de persistencia dinámica. El proyecto se centra en la configuración, conexión y gestión de una base de datos externa PostgreSQL, asegurando la integridad de la información mediante el ORM de Django.
 
-## Tech Stack
-- Python 3.x
-- Django Framework
-- PostgreSQL Database
+## 🚀 Objetivos y Capacidades Técnicas
 
-## Usage
-1. Clone this repository: `git clone [repository-url]`
-2. Navigate into the directory: `cd Proyecto-Hito-1-Conectando-Django-a-una-base-de-databases`
-3. Create a virtual environment and activate it.
-4. Install dependencies using pip: `pip install -r requirements-inmobiliaria.txt`
-5. Run migrations to set up database tables: `python manage.py migrate`
-6. Start the development server: `python manage.py runserver`
+* **Conectividad de Base de Datos:** Configuración avanzada de motores de bases de datos relacionales en entornos Django.
+* **Modelado de Datos (ORM):** Creación de esquemas relacionales eficientes, definiendo tipos de campos, validaciones y relaciones entre entidades.
+* **Persistencia Dinámica:** Implementación de la capa de modelos para permitir que la aplicación realice operaciones CRUD completas de forma persistente.
+* **Gestión de Entornos:** Configuración segura de parámetros de conexión mediante mejores prácticas de desarrollo.
 
-## Files
-- `.gitignore`: Configures Git to ignore certain files and directories.
-- `Hito1`: Contains project-specific scripts or configurations.
-- `inmobiliaria`: Folder containing models, views, templates, and static files for the application.
+## 🛠️ Stack Tecnológico
 
-### Structure Analysis:
-- The presence of a `manage.py` file indicates that this is indeed a Django Web Application. No other technologies are evident in the provided structure to suggest any alternative frameworks or languages.
+* **Lenguaje:** Python 3.x
+* **Framework:** Django 4.x / 5.x
+* **Base de Datos:** PostgreSQL.
+* **Control de Versiones de DB:** Django Migrations
 
-This README.md provides clear documentation based on the given file structure and language indicators, ensuring no assumptions are made about the project's technology stack.
+## ⚙️ Resolución del Desafío Técnico
+
+El desarrollo se centró en establecer un puente de comunicación eficiente entre la lógica de negocio y el almacenamiento:
+
+1. **Configuración de Engine:** Se integraron los drivers necesarios (como `psycopg2` para Postgres) para permitir la comunicación fluida entre Python y el motor de base de datos.
+2. **Abstracción de Datos:** Se utilizaron los Modelos de Django para abstraer la complejidad de SQL, permitiendo una gestión de datos más segura y orientada a objetos.
+3. **Sincronización de Esquemas:** Aplicación de migraciones para reflejar los cambios en los modelos directamente en la estructura de las tablas de la base de datos, garantizando la consistencia del sistema.
+
+## 📌 Configuración Inicial
+
+Para replicar este entorno localmente, se deben seguir estos pasos:
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone [https://github.com/longaresf/django-db-integration.git](https://github.com/longaresf/django-db-integration.git)
+    ````
+2. Instalar dependencias:
+  Bash
+  pip install -r requirements.txt
+
+3. Configurar la base de datos:
+Asegúrate de tener instalado el motor de base de datos y configurar las credenciales en el archivo settings.py (o en un archivo .env si se implementó).
+
+4. Ejecutar migraciones:
+  Bash
+  python manage.py makemigrations
+  python manage.py migrate
+
+5. Correr el servidor:
+  Bash
+  python manage.py runserver
+
+✒️ Autor
+
+    Francisco Longares - Desarrollador Backend Python - longaresf
+
+    Este proyecto forma parte del desarrollo de competencias en arquitectura de datos dentro del programa Full Stack Python de Desafío Latam.
